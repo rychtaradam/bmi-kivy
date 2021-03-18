@@ -1,0 +1,19 @@
+{
+  "osoby": [
+    {
+      "name": "Alexandra Švajdová",
+      "state": "CZE",
+      "img": "images/female.png"
+    },
+    {
+      "name": "Adam Rychtář",
+      "state": "CZE",
+      "img": "images/male.png"
+    },
+    {
+      "name": "Donald Trump",
+      "state": "USA",
+      "img": "images/male.png"
+    }
+  ]
+}

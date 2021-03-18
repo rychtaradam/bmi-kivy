@@ -46,7 +46,7 @@ BoxLayout:
     FloatLayout:
         canvas:
             Color:
-                rgba: app.theme_cls.primary_dark
+                rgba: (0.1568, 0.1568, 0.1568, 1)
             RoundedRectangle:
                 pos: self.pos
                 size: self.size
@@ -54,7 +54,7 @@ BoxLayout:
 
         MDLabel:
             id: result
-            text: 'Výsledek'
+            text: 'Výsledek:'
             size_hint: (.5, .1)
             pos_hint: {'center_x': 0.5, 'center_y': 0.9}
             halign: 'center'
@@ -68,14 +68,14 @@ BoxLayout:
 
         BoxLayout:
             orientation: 'horizontal'
-            size_hint_x: 0.8
+            size_hint_x: 0.5
             size_hint_y: 0.1
             pos_hint: {'center_x': 0.5, 'center_y': 0.7}
             height: self.minimum_height
             spacing: 10
             canvas.before:
                 Color:
-                    rgba: 0.5, 0.5, 0, 1
+                    rgba: 0, 0.5, 1, 1
                 Rectangle:
                     pos: self.pos
                     size: self.size
@@ -95,14 +95,14 @@ BoxLayout:
 
         BoxLayout:
             orientation: 'horizontal'
-            size_hint_x: 0.8
+            size_hint_x: 0.5
             size_hint_y: 0.1
             pos_hint: {'center_x': 0.5, 'center_y': 0.5}
             height: self.minimum_height
             spacing: 10
             canvas.before:
                 Color:
-                    rgba: 0.5, 0.5, 0, 1
+                    rgba: 0, 0.5, 1, 1
                 Rectangle:
                     pos: self.pos
                     size: self.size
@@ -127,7 +127,7 @@ BoxLayout:
             pos_hint: {'center_x': 0.5, 'center_y': 0.1}
             on_press:
                 print("Stisknuto")
-                root.ids.result.text = str(int(root.ids.vaha.text) / (int(root.ids.vyska.text) / 100) ** 2)
+                root.ids.result.text = str(round(int(root.ids.vaha.text) / (int(root.ids.vyska.text) / 100) ** 2, 2))
 
 <FormScreen>
     name:'formscreen'
